@@ -1,0 +1,19 @@
+{
+    "name": "DJANGO Starter",
+    "description": "starter project for django admin",
+    "repository": "https://github.com/LuckyWirasakti/django-starter",
+    "keywords": ["python", "django", "starter"],
+    "scripts": {
+      "postdeploy": "python manage.py migrate --noinput"
+    },
+    "success_url": "/",
+    "env": {
+      "SECRET_KEY": {
+        "description": "A randomly generated secret to secure your Django installation.",
+        "generator": "secret"
+      },
+      "DEBUG": "True",
+      "DATABASE_URL":"sqlite:///db.sqlite3",
+      "ALLOWED_HOSTS":"*"
+    }
+  }
