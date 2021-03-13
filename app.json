@@ -15,7 +15,7 @@
         "description": "A randomly generated secret to secure your Django installation.",
         "generator": "secret"
       },
-      "DEBUG": "1",
+      "DEBUG": "True",
       "DISABLE_COLLECTSTATIC":"1",
       "ALLOWED_HOSTS":"*"
     }
