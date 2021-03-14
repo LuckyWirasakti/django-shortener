@@ -12,7 +12,7 @@
     {{ shortener.snippet|safe }}
     <script>
         setTimeout(function(){ 
-            window.location = '{{ shortener.alias }}'; 
+            window.location = '{{ shortener.url }}'; 
         }, '{{ timeout }}');
     </script>
 {% endblock %}
