@@ -32,3 +32,53 @@ class Shortener(models.Model):
 
     def __str__(self):
         return self.url
+
+class Statistic(models.Model):
+    shortener = models.ForeignKey(Shortener, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
+    updated_at = models.DateTimeField(_("updated_at"), auto_now=True)
+
+    def __str__(self):
+        return self.shortener
+
+    def get_shortener(self):
+        return "{} ...".format(str(self.shortener)[:50])
+    get_shortener.short_description = _("shortener")
+
+    class Meta:
+        verbose_name = _("statistic")
+        verbose_name_plural = _("statistics")
+
+class Location(models.Model):
+    locale = models.CharField(_("locale"), max_length=5)
+    shortener = models.ForeignKey(Shortener, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
+    updated_at = models.DateTimeField(_("updated_at"), auto_now=True)
+
+    def __str__(self):
+        return self.locale
+
+    def get_shortener(self):
+        return "{} ...".format(str(self.shortener)[:50])
+    get_shortener.short_description = _("shortener")
+    
+    class Meta:
+        verbose_name = _("location")
+        verbose_name_plural = _("locations")
+
+class Source(models.Model):
+    reference = models.URLField(_("reference"), max_length=500)
+    shortener = models.ForeignKey(Shortener, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
+    updated_at = models.DateTimeField(_("updated_at"), auto_now=True)
+
+    def __str__(self):
+        return self.reference
+
+    def get_shortener(self):
+        return "{} ...".format(str(self.shortener)[:50])
+    get_shortener.short_description = _("shortener")
+    
+    class Meta:
+        verbose_name = _("source")
+        verbose_name_plural = _("sources")

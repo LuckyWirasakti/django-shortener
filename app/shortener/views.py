@@ -10,6 +10,9 @@ class RedirectView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         obj = get_object_or_404(Shortener, alias=kwargs.get('alias'))
+        obj.source_set.create(reference="https://www.google.com")
+        obj.location_set.create(locale="id")
+        obj.statistic_set.create()
         obj.increment()
         context["shortener"] = obj
         context["timeout"] = 3000

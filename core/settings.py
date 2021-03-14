@@ -50,7 +50,7 @@ DEFAULT_APPS = [
 ]
 
 THIRD_PARTY_APPS =[
-
+    'rangefilter',
 ]
 
 LOCAL_APPS = [
