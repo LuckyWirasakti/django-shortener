@@ -1,0 +1,77 @@
+#: app/shortener/apps.py:6 app/shortener/models.py:25
+msgid "shortener"
+msgstr "Pemendek"
+
+#: app/shortener/models.py:6 app/shortener/models.py:15
+msgid "url"
+msgstr "Alamat"
+
+#: app/shortener/models.py:6
+msgid "help_url"
+msgstr "Alamat asli"
+
+#: app/shortener/models.py:7
+msgid "alias"
+msgstr "Pengganti"
+
+#: app/shortener/models.py:7
+msgid "help_alias"
+msgstr "Nama pengganti alamat lebih ringkas"
+
+#: app/shortener/models.py:8 app/shortener/models.py:21
+#, fuzzy
+#| msgid "help_snippet"
+msgid "snippet"
+msgstr "Potongan kode untuk penggunaan analisa google/facebook"
+
+#: app/shortener/models.py:8
+msgid "help_snippet"
+msgstr "Potongan kode untuk penggunaan analisa google/facebook"
+
+#: app/shortener/models.py:9
+msgid "count"
+msgstr "hitung"
+
+#: app/shortener/models.py:9
+msgid "help_count"
+msgstr "Nilai hitung hasil klik"
+
+#: app/shortener/models.py:10
+msgid "created_at"
+msgstr "dibuat"
+
+#: app/shortener/models.py:11
+msgid "updated_at"
+msgstr "terakhir diperbaharui"
+
+#: app/shortener/models.py:26
+msgid "shorteners"
+msgstr "Pemendek"
+
+#: core/settings.py:128
+msgid "English"
+msgstr "Bahasa Inggris"
+
+#: core/settings.py:129
+msgid "Indonesian"
+msgstr "Bahasa Indonesia"
+
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+#~ msgid "Shortener"
+#~ msgstr "Pemendek"
+#~ "PemendekPemendekProject-Id-Version: PACKAGE VERSION\n"
+#~ "Report-Msgid-Bugs-To: \n"
+#~ "POT-Creation-Date: 2021-03-14 06:55+0700\n"
+#~ "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+#~ "Last-Translator: LUCKY WIRASAKTI <lucky.wirasakti@icloud.com>\n"
+#~ "Language-Team: LANGUAGE <LL@li.org>\n"
+#~ "Language: \n"
+#~ "MIME-Version: 1.0\n"
+#~ "Content-Type: text/plain; charset=UTF-8\n"
+#~ "Content-Transfer-Encoding: 8bit\n"
+#~ "Plural-Forms: nplurals=1; plural=0;\n"
