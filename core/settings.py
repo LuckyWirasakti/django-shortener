@@ -19,7 +19,6 @@ from django.utils.translation import gettext_lazy as _
 env = environ.Env(
     # set casting, default value
     DEBUG=(bool, True),
-    COMPRESS_ENABLED=(bool, False)
 )
 # reading .env file
 environ.Env.read_env()
@@ -143,11 +142,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'), 
+]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-
-DEBUG_PROPAGATE_EXCEPTIONS = True
-COMPRESS_ENABLED=env('COMPRESS_ENABLED')
 
 LOGGING = {
     'version': 1,
