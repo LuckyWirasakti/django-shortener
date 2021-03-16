@@ -11,11 +11,13 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 import os
+import mimetypes
 from pathlib import Path
 
 import environ
 from django.utils.translation import gettext_lazy as _
 
+mimetypes.add_type("text/css", ".css", True)
 env = environ.Env(
     # set casting, default value
     DEBUG=(bool, True),
